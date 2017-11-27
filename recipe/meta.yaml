@@ -27,7 +27,7 @@ test:
 
 about:
   home: http://www.decalage.info/python/olefileio
-  license:  BSD License 2-Clause
+  license:  BSD 2-Clause
   license_family: BSD
   summary: >
     Python package to parse, read and write Microsoft OLE2 files
