@@ -3,7 +3,7 @@ About olefile
 
 Home: http://www.decalage.info/python/olefileio
 
-Package license: BSD License 2-Clause
+Package license: BSD 2-Clause
 
 Feedstock license: BSD 3-Clause
 
