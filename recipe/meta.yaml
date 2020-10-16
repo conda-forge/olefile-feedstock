@@ -27,8 +27,9 @@ test:
 
 about:
   home: http://www.decalage.info/python/olefileio
-  license:  BSD 2-Clause
+  license:  BSD-2-Clause
   license_family: BSD
+  license_file: LICENSE.txt
   summary: >
     Python package to parse, read and write Microsoft OLE2 files
     (Structured Storage or Compound Document, Microsoft Office) -
