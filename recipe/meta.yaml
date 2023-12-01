@@ -1,4 +1,4 @@
-{% set version = "0.46" %}
+{% set version = "0.47" %}
 
 package:
   name: olefile
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/o/olefile/olefile-{{ version }}.zip
-  sha256: 133b031eaf8fd2c9399b78b8bc5b8fcbe4c31e85295749bb17a87cba8f3c3964
+  sha256: 599383381a0bf3dfbd932ca0ca6515acd174ed48870cbf7fee123d698c192c1c
 
 build:
-    noarch: python
-    number: 1
-    script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
@@ -27,14 +27,11 @@ test:
 
 about:
   home: http://www.decalage.info/python/olefileio
-  license:  BSD-2-Clause
+  license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE.txt
   summary: >
-    Python package to parse, read and write Microsoft OLE2 files
-    (Structured Storage or Compound Document, Microsoft Office) -
-    Improved version of the OleFileIO module from PIL, the Python
-    Image Library.
+    Python package to parse, read and write Microsoft OLE2 files (Structured Storage or Compound Document, Microsoft Office) - Improved version of the OleFileIO module from PIL, the Python Image Library.
   dev_url: https://github.com/decalage2/olefile
 
 extra:
