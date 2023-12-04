@@ -1,30 +1,33 @@
+{% set name = "olefile" %}
 {% set version = "0.47" %}
 
 package:
-  name: olefile
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/o/olefile/olefile-{{ version }}.zip
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/olefile-{{ version }}.zip
   sha256: 599383381a0bf3dfbd932ca0ca6515acd174ed48870cbf7fee123d698c192c1c
 
 build:
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
-
   run:
-    - python
+    - python >=3.7
 
 test:
   imports:
     - olefile
-
+  commands:
+    - pip check
+  requires:
+    - pip
 about:
   home: http://www.decalage.info/python/olefileio
   license: BSD-2-Clause
